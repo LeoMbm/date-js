@@ -32,7 +32,7 @@ function getDaysBetween() {
   let number = Math.floor(result / 3600 / 24 / 1000);
 
   let h1 = document.createElement("h1");
-  h1.innerHTML = "Here " + number + " days is passed since " + passed;
+  h1.innerText = "Here " + number + " days is passed since " + passed;
 
   document.body.appendChild(h1);
 }
@@ -47,7 +47,7 @@ input.setAttribute("type", "number");
 input.setAttribute("placeholder", "Give me Hours");
 let pTime = document.createElement("p");
 let time = new Date();
-pTime.innerHTML = time;
+pTime.innerText = time;
 document.body.appendChild(div);
 div.appendChild(pTime);
 div.appendChild(input);
@@ -58,6 +58,8 @@ function calculateHours() {
   let dateNow = Date.now();
   let value = input.value * 3600 * 1000;
   let result = dateNow + value;
-  pTime.innerHTML = new Date(result);
+  pTime.innerText = new Date(result);
   //   console.log(result);
 }
+
+// Exo 4
