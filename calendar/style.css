@@ -14,7 +14,6 @@ body {
 #calendar {
   width: 80vw;
   height: 90vh;
-  background: #000;
   margin: auto;
   margin-top: 30px;
   display: flex;
@@ -24,7 +23,7 @@ body {
 
 .calendar-paper {
   width: 400px;
-  height: 600px;
+  height: auto;
   border-radius: 80px;
 }
 
@@ -41,7 +40,7 @@ body {
 
 #day {
   padding: 30px;
-  font-size: 2.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   color: #fff;
 }
@@ -55,12 +54,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .middle-container {
   text-align: center;
   color: #909090;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 .calendar-footer {
   background-color: #b03737;
@@ -68,4 +68,29 @@ body {
   height: 20%;
   border-radius: 0 0 80px 80px;
   border: 5px solid #912c2c;
+  padding: 30px;
+}
+
+.year-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.year-text {
+  color: white;
+  font-size: 4rem;
+}
+
+.calendar-time {
+  width: 40%;
+  height: auto;
+  text-align: center;
+}
+
+.time-text {
+  font-size: 6rem;
+  color: #474747;
 }

@@ -102,4 +102,62 @@ getNumbMonth();
 
 // Year footer
 
-function getYear() {}
+function getYear() {
+  let date = new Date();
+
+  let year = date.getFullYear();
+
+  let divYear = document.createElement("div");
+  divYear.className = "year-container";
+
+  let textYear = document.createElement("p");
+  textYear.className = "year-text";
+  textYear.innerHTML = year;
+
+  footer.appendChild(divYear);
+  divYear.appendChild(textYear);
+  console.log(year);
+}
+
+getYear();
+
+// Time live
+
+function getTime() {}
+
+function timer() {
+  let date = new Date();
+
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+
+  let time = hours + ":" + minutes + ":" + seconds;
+
+  let timeContainer = document.createElement("div");
+  timeContainer.className = "time-container";
+
+  let textTime = document.createElement("p");
+  textTime.className = "time-text";
+  textTime.innerHTML = time;
+
+  rightDiv.appendChild(timeContainer);
+  timeContainer.appendChild(textTime);
+  setTimeout(function () {
+    timer();
+    timeContainer.remove();
+  }, 1000);
+}
+
+timer();
