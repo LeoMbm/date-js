@@ -27,3 +27,28 @@ footer.className = "calendar-footer";
 leftDiv.appendChild(header);
 leftDiv.appendChild(middle);
 leftDiv.appendChild(footer);
+
+// Date header
+
+let day = new Date();
+let weekday = new Array(7);
+weekday[0] = "Sun";
+weekday[1] = "Mon";
+weekday[2] = "Tue";
+weekday[3] = "Wed";
+weekday[4] = "Thu";
+weekday[5] = "Fri";
+weekday[6] = "Sat";
+
+let n = weekday[day.getDay()];
+let dayContainer = document.createElement("div");
+dayContainer.className = "day-container";
+
+let dayInCalendar = document.createElement("h2");
+dayInCalendar.setAttribute("id", "day");
+
+dayInCalendar.innerHTML = n;
+
+header.appendChild(dayContainer);
+dayContainer.appendChild(dayInCalendar);
+console.log(n);
